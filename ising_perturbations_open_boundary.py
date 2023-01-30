@@ -5,6 +5,7 @@ X = np.array([[0, 1], [1, 0]])
 I = np.array([[1, 0], [0, 1]])
 alpha = 1
 
+
 for n in range(2, 12):
     N = n
     total_matrix_sum = np.zeros((2**N, 2**N))

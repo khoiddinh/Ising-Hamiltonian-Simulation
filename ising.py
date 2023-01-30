@@ -25,8 +25,10 @@ for n in range(2, 12):  # loop over from N=2 to N=11 case
             diagonal.append(0)
     assert len(diagonal) == 2**n  # check matrix size
     ev = np.linalg.eig(total_matrix_sum)
-    vals = ev[0]
+    vals = [*map(abs, ev[0])]
     vectors = ev[1]
+    print(vals)
+    print(vectors)
     print(f"N = {n}; Diagonal: {diagonal}")
     print(f"{np.unique(vals)}")
     print(f"Number of eigen values {np.unique(vals).shape[0]}")
